@@ -1,4 +1,4 @@
-## Modelo Relacional - Ponderada de Programação
+*## Modelo Relacional - Ponderada de Programação
 
 **Projeto:** Abandono Zero
 
@@ -30,8 +30,8 @@
   - **phone:** Número de telefone do usuário.
 <br>
 - **Formulários**
-    - **Geral** (`general_forms`): Detalhes gerais do usuário (renda, moradia, etc.).
-      - **id (Chave Primária):** Identificador único para cada registro de formulário geral.
+- **Geral** (`general_forms`): Detalhes gerais do usuário (renda, moradia, etc.).
+      -  **id (Chave Primária):** Identificador único para cada registro de formulário geral.
       - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
       - **age:** Idade do usuário.
       - **gender:** Gênero do usuário.
@@ -205,3 +205,4 @@
 ## Considerações Finais
 
 &nbsp;&nbsp;&nbsp;&nbsp;Este modelo relacional simplificado fornece uma base para o gerenciamento eficiente das informações dos usuários e suas respostas nos formulários do projeto Abandono Zero. As entidades, seus atributos e relacionamentos garantem a organização e a integridade dos dados. As regras de negócio garantem a consistência e a confiabilidade das informações.
+*
