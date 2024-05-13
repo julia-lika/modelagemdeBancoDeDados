@@ -171,29 +171,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Partindo dos princípios supracitados, os seguintes relacionamentos foram estabelecidos entre as entidades:
 
-- A tabela `users` armazena informações sobre os usuários do sistema, onde o campo id é a chave primária, garantindo a unicidade de cada usuário.
-<br>
-
-- A tabela `user_forms` está relacionada à tabela `users` através do campo `id_users`, que é uma chave estrangeira. Cada registro em `user_forms` está associado a um único usuário na tabela `users`.
-<br>
-
 - A cardinalidade desse relacionamento é um para um (1:1) porque cada usuário preenche exatamente uma `general_forms` e cada `general_forms` é preenchida por exatamente um usuário.
-<br>
-
-- A cardinalidade do relacionamento entre `have_forms` e `users` é um para muitos (1:N), pois cada usuário pode possuir um ou mais cachorros, e cada registro na tabela `have_forms` está vinculado a exatamente um usuário.
-  Já a  cardinalidade do relacionamento entre `have_forms` e `dog_forms_have` é um para um (1:1), pois cada entrada em `have_forms` está vinculada a exatamente uma entrada em `dog_forms_have`, e vice-versa.
-<br>
-
-- A cardinalidade do relacionamento entre `had_forms` e `users` é um para muitos (1:N), pois cada usuário pode ter um ou mais cachorros, e cada registro de cachorro está vinculado a exatamente um usuário.
-
-  A cardinalidade do relacionamento entre `had_forms` e `dog_forms_have` é um para um (1:1), pois cada registro de cachorro em `had_forms` está vinculado a uma única razão na tabela `dog_forms_have`, e vice-versa.
-<br>
-
-- A cardinalidade do relacionamento entre `want_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher múltiplas preferências sobre o tipo de cachorro que deseja, e cada registro na tabela `want_forms` está associado a exatamente um usuário.
-<br>
-
+- A cardinalidade do relacionamento entre `have_forms` e `users` é um para muitos (1:N), pois cada usuário pode possuir um ou mais cachorros, e cada registro na tabela `have_forms` está vinculado a exatamente um usuário. Já a cardinalidade do relacionamento entre `have_forms` e `dog_forms_have` é um para um (1:1), pois cada entrada em `have_forms` está vinculada a exatamente uma entrada em `dog_forms_have`, e vice-versa.
+- A cardinalidade do relacionamento entre `had_forms` e `users` é um para muitos (1:N), pois cada usuário pode ter um ou mais cachorros, e cada registro de cachorro está vinculado a exatamente um usuário. Já a cardinalidade do relacionamento entre `had_forms` e `dog_forms_have` é um para um (1:1), pois cada registro de cachorro em `had_forms` está vinculado a uma única razão na tabela `dog_forms_have`, e vice-versa.
+- A cardinalidade do relacionamento entre `want_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher múltiplas preferências sobre o tipo de cachorro que deseja, e cada registro na tabela `want_forms` está associado a exatamente um usuário. Já a cardinalidade do relacionamento entre `want_forms` e `dog_forms_want` é um para um (1:1), pois cada registro de cachorro em `want_forms` está vinculado a uma única razão na tabela `dog_forms_want`, e vice-versa.
 - A cardinalidade do relacionamento entre `null_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher várias razões para não querer um cachorro, e cada entrada na tabela `null_forms` está vinculada a exatamente um usuário.
-
 <br>
 
 ## Regras de Negócio
@@ -215,7 +197,6 @@
 </div>
  
 &nbsp;&nbsp;&nbsp;&nbsp;Esse modelo relacional pode ser gerado por meio do código em sql, para acessar [clique aqui](modelagemRelacional.xml)
-
 <br>
 
 ## Considerações Finais

@@ -318,8 +318,7 @@
 <default>NULL</default></row>
 <row name="id_dog_forms_have" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="dog_forms_have" row="id" />
-</row>
+<default>NULL</default></row>
 <row name="id_dog_forms_want" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dog_forms_want" row="id" />
