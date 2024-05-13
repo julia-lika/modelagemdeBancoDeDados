@@ -120,6 +120,7 @@
     - **id_dog_forms_have:** Chave estrangeira
     - **id_dog_forms_want:** Chave estrangeira
   <br>
+
   - **Sem Cão** (`null_forms`): Motivo pelo qual o usuário não tem e não deseja ter um cão.
     - **id (Chave Primária):** Identificador único para cada registro de formulário nulo.
     - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
@@ -170,28 +171,28 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Partindo dos princípios supracitados, os seguintes relacionamentos foram estabelecidos entre as entidades:
 
-- **users (id):** A tabela `users` armazena informações sobre os usuários do sistema, onde o campo id é a chave primária, garantindo a unicidade de cada usuário.
+- A tabela `users` armazena informações sobre os usuários do sistema, onde o campo id é a chave primária, garantindo a unicidade de cada usuário.
 <br>
 
-- **user_forms (id_users):** A tabela `user_forms` está relacionada à tabela `users` através do campo `id_users`, que é uma chave estrangeira. Cada registro em `user_forms` está associado a um único usuário na tabela `users`.
+- A tabela `user_forms` está relacionada à tabela `users` através do campo `id_users`, que é uma chave estrangeira. Cada registro em `user_forms` está associado a um único usuário na tabela `users`.
 <br>
 
-- **general_forms (id_users):** A cardinalidade desse relacionamento é um para um (1:1) porque cada usuário preenche exatamente uma `general_forms` e cada `general_forms` é preenchida por exatamente um usuário.
+- A cardinalidade desse relacionamento é um para um (1:1) porque cada usuário preenche exatamente uma `general_forms` e cada `general_forms` é preenchida por exatamente um usuário.
 <br>
 
-- **have_forms (id_users):** A cardinalidade do relacionamento entre `have_forms` e `users` é um para muitos (1:N), pois cada usuário pode possuir um ou mais cachorros, e cada registro na tabela `have_forms` está vinculado a exatamente um usuário.
+- A cardinalidade do relacionamento entre `have_forms` e `users` é um para muitos (1:N), pois cada usuário pode possuir um ou mais cachorros, e cada registro na tabela `have_forms` está vinculado a exatamente um usuário.
   Já a  cardinalidade do relacionamento entre `have_forms` e `dog_forms_have` é um para um (1:1), pois cada entrada em `have_forms` está vinculada a exatamente uma entrada em `dog_forms_have`, e vice-versa.
 <br>
 
-- **had_forms (id_users):** A cardinalidade do relacionamento entre `had_forms` e `users` é um para muitos (1:N), pois cada usuário pode ter um ou mais cachorros, e cada registro de cachorro está vinculado a exatamente um usuário.
+- A cardinalidade do relacionamento entre `had_forms` e `users` é um para muitos (1:N), pois cada usuário pode ter um ou mais cachorros, e cada registro de cachorro está vinculado a exatamente um usuário.
 
   A cardinalidade do relacionamento entre `had_forms` e `dog_forms_have` é um para um (1:1), pois cada registro de cachorro em `had_forms` está vinculado a uma única razão na tabela `dog_forms_have`, e vice-versa.
 <br>
 
-- **want_forms (id_users):** A cardinalidade do relacionamento entre `want_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher múltiplas preferências sobre o tipo de cachorro que deseja, e cada registro na tabela `want_forms` está associado a exatamente um usuário.
+- A cardinalidade do relacionamento entre `want_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher múltiplas preferências sobre o tipo de cachorro que deseja, e cada registro na tabela `want_forms` está associado a exatamente um usuário.
 <br>
 
-- **null_forms (id_users):** A cardinalidade do relacionamento entre `null_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher várias razões para não querer um cachorro, e cada entrada na tabela `null_forms` está vinculada a exatamente um usuário.
+- A cardinalidade do relacionamento entre `null_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher várias razões para não querer um cachorro, e cada entrada na tabela `null_forms` está vinculada a exatamente um usuário.
 
 <br>
 
