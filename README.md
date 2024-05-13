@@ -1,8 +1,8 @@
-*## Modelo Relacional - Ponderada de Programação
+# Modelo Relacional - Ponderada de Programação
 
 **Projeto:** Abandono Zero
 
-**Data:** 2024-05-08
+**Data:** 2024-05-11
 
 **Autor:** Júlia Lika Ishikawa
 
@@ -14,37 +14,40 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**Modelagem Conceitual:** Nesta fase, o foco está na identificação das entidades principais do sistema, seus atributos e os relacionamentos entre elas. O modelo conceitual é independente do sistema de gerenciamento de banco de dados (SGBD) e é geralmente representado por diagramas de entidade-relacionamento (ER).
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Modelagem Lógica:** Nesta fase, o modelo conceitual é convertido em um modelo lógico, onde as entidades são transformadas em tabelas, os atributos em colunas e os relacionamentos em chaves estrangeiras. O modelo lógico é mais próximo da implementação física do banco de dados e geralmente é representado por diagramas de modelo relacional.
-<br><br>
+
+<br>
 
 ## Entidades
 &nbsp;&nbsp;&nbsp;&nbsp;Este esquema de banco de dados foi projetado para armazenar informações detalhadas sobre usuários e seus relacionamentos com cães, permitindo análises abrangentes sobre posse, desejos e experiências passadas com cães. Os relacionamentos entre as tabelas são estabelecidos por meio de chaves estrangeiras, garantindo integridade referencial e facilitando consultas complexas sobre os dados.
-- **Usuários** (`users`): Armazena informações básicas sobre os usuários:
-  - **id (Chave Primária):** Identificador único para cada usuário.
-  - **name:** Nome do usuário.
-  - **email:** Endereço de e-mail do usuário.
-  - **password:** Senha do usuário.
-  - **role:** Papel ou função do usuário no sistema (por exemplo, admin, usuário regular).
-  - **first_name:** Primeiro nome do usuário.
-  - **last_name:** Sobrenome do usuário.
-  - **social_name:** Nome social do usuário.
-  - **phone:** Número de telefone do usuário.
+  - **Usuários** (`users`): Armazena informações básicas sobre os usuários:
+    - **id (Chave Primária):** Identificador único para cada usuário.
+    - **name:** Nome do usuário.
+    - **email:** Endereço de e-mail do usuário.
+    - **password:** Senha do usuário.
+    - **role:** Papel ou função do usuário no sistema (por exemplo, admin, usuário regular).
+    - **first_name:** Primeiro nome do usuário.
+    - **last_name:** Sobrenome do usuário.
+    - **social_name:** Nome social do usuário.
+    - **phone:** Número de telefone do usuário.
 <br>
+
 - **Formulários**
-- **Geral** (`general_forms`): Detalhes gerais do usuário (renda, moradia, etc.).
-      -  **id (Chave Primária):** Identificador único para cada registro de formulário geral.
-      - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
-      - **age:** Idade do usuário.
-      - **gender:** Gênero do usuário.
-      - **education:** Nível de educação do usuário.
-      - **residence:** Tipo de residência do usuário.
-      - **family_composition:** Composição familiar do usuário.
-      - **income_bracket:** Faixa de renda do usuário.
-      - **household_members:** Número de membros na família do usuário.
-      - **country:** País de residência do usuário.
-      - **state:** Estado de residência do usuário.
-      - **city:** Cidade de residência do usuário.
-      - **district:** Bairro de residência do usuário.
+  - **Geral** (`general_forms`): Detalhes gerais do usuário (renda, moradia, etc.).
+    - **id (Chave Primária):** Identificador único para cada registro de formulário geral.
+    - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
+    - **age:** Idade do usuário.
+    - **gender:** Gênero do usuário.
+    - **education:** Nível de educação do usuário.
+    - **residence:** Tipo de residência do usuário.
+    - **family_composition:** Composição familiar do usuário.
+    - **income_bracket:** Faixa de renda do usuário.
+    - **household_members:** Número de membros na família do usuário.
+    - **country:** País de residência do usuário.
+    - **state:** Estado de residência do usuário.
+    - **city:** Cidade de residência do usuário.
+    - **district:** Bairro de residência do usuário.
   <br>
+
   - **Possuir Cão** (`have_forms`): Informações sobre o cão que o usuário possui (raça, idade, etc.).
     - **id (Chave Primária):** Identificador único para cada registro de formulário de posse de cão.
     - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
@@ -70,6 +73,7 @@
     - **about_dog:** Informações adicionais sobre o cão.
     - **id_dog_forms_have:** Chave estrangeira
   <br>
+
   - **Já Teve Cão** (`had_forms`): Informações sobre o cão que o usuário já teve (nome, personalidade, etc.).
     - **id (Chave Primária):** Identificador único para cada registro de formulário de posse anterior de cão.
     - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
@@ -97,6 +101,7 @@
     - **would_live_new_dog:** Intenções de conviver com um novo cão.
     - **id_dog_forms_have:** Chave estrangeira
   <br>
+
   - **Deseja Cão** (`want_forms`): Informações sobre o cão que o usuário deseja ter (tamanho, pelagem, etc.).
     - **id (Chave Primária):** Identificador único para cada registro de formulário de desejo de ter um cão.
     - **id_users (Chave Estrangeira):** Referência ao ID do usuário na tabela users.
@@ -128,6 +133,7 @@
     - **phone_number:** Uma coluna que armazena o número de telefone do usuário.
     - **email:** Uma coluna que armazena o endereço de e-mail do usuário.
 <br>
+
 - **Cão (Possuir)** (`dog_forms_have`): Informações extras sobre o cão que o usuário possui (nome, gênero, castrado, etc.).
     - **id:** Identificador único para cada registro na tabela.
     - **kids_company:** Se o cão faz companhia para crianças.
@@ -143,44 +149,51 @@
     - **chose_me:** Se o cão escolheu o dono.
     - **gift:** Se o cão foi um presente.
 <br>
+
 - **Cão (Desejar)** (`dog_forms_want`): Informações extras sobre o cão que o usuário deseja ter (tamanho, pelagem, cor, etc.).
   - **kids_company:** Se o cão faz companhia para crianças.
   - **adults_company:** Se o cão faz companhia para adultos. 
   - **parents_have:** Se os pais já tiveram/têm.
   - **responsibility_to_children:** Nível de responsabilidade em relação às crianças.
-  - *friend_have:* Se amigos têm.
+  - **friend_have:** Se amigos têm.
   - **protection:** Se o cão oferece proteção.
   - **met_before:** Se o tutor já tinha conhecido o cão antes.
-<br><br>
+
+<br>
 
 ## Relacionamentos
 
 - Um usuário pode ter um único formulário geral (1:1).
-- Um usuário pode ter vários formulários de cães (N:M).
+- Um usuário pode ter vários formulários de cães (N:N).
 - Um formulário de "possuir cão" pode ter um único registro de "cão (possuir)".
 - Um formulário de "desejar cão" pode ter um único registro de "cão (desejar)".
 
 &nbsp;&nbsp;&nbsp;&nbsp;Partindo dos princípios supracitados, os seguintes relacionamentos foram estabelecidos entre as entidades:
 
-- **users (id):** A tabela users é a tabela principal que armazena informações sobre os usuários do sistema. O campo id é a chave primária desta tabela, garantindo que cada usuário tenha um identificador único. 
+- **users (id):** A tabela `users` armazena informações sobre os usuários do sistema, onde o campo id é a chave primária, garantindo a unicidade de cada usuário.
+<br>
 
-- **general_forms (id_users):** A tabela general_forms está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Isso significa que cada registro em general_forms está associado a um único usuário na tabela users.
+- **user_forms (id_users):** A tabela `user_forms` está relacionada à tabela `users` através do campo `id_users`, que é uma chave estrangeira. Cada registro em `user_forms` está associado a um único usuário na tabela `users`.
+<br>
 
-- **have_forms (id_users):** A tabela have_forms também está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em have_forms está associado a um único usuário na tabela users.
+- **general_forms (id_users):** A cardinalidade desse relacionamento é um para um (1:1) porque cada usuário preenche exatamente uma `general_forms` e cada `general_forms` é preenchida por exatamente um usuário.
+<br>
 
-- **had_forms (id_users):** A tabela had_forms está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em had_forms está associado a um único usuário na tabela users.
+- **have_forms (id_users):** A cardinalidade do relacionamento entre `have_forms` e `users` é um para muitos (1:N), pois cada usuário pode possuir um ou mais cachorros, e cada registro na tabela `have_forms` está vinculado a exatamente um usuário.
+  Já a  cardinalidade do relacionamento entre `have_forms` e `dog_forms_have` é um para um (1:1), pois cada entrada em `have_forms` está vinculada a exatamente uma entrada em `dog_forms_have`, e vice-versa.
+<br>
 
-- **want_forms (id_users):** A tabela want_forms está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em want_forms está associado a um único usuário na tabela users.
+- **had_forms (id_users):** A cardinalidade do relacionamento entre `had_forms` e `users` é um para muitos (1:N), pois cada usuário pode ter um ou mais cachorros, e cada registro de cachorro está vinculado a exatamente um usuário.
 
-- **null_forms (id_users):** A tabela null_forms está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em null_forms está associado a um único usuário na tabela users.
+  A cardinalidade do relacionamento entre `had_forms` e `dog_forms_have` é um para um (1:1), pois cada registro de cachorro em `had_forms` está vinculado a uma única razão na tabela `dog_forms_have`, e vice-versa.
+<br>
 
-- **dog_forms_have (id_users):** A tabela dog_forms_have está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em dog_forms_have está associado a um único usuário na tabela users.
+- **want_forms (id_users):** A cardinalidade do relacionamento entre `want_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher múltiplas preferências sobre o tipo de cachorro que deseja, e cada registro na tabela `want_forms` está associado a exatamente um usuário.
+<br>
 
-- **dog_forms_want (id_users):** A tabela dog_forms_want está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em dog_forms_want está associado a um único usuário na tabela users.
+- **null_forms (id_users):** A cardinalidade do relacionamento entre `null_forms` e `users` é um para muitos (1:N), pois cada usuário pode preencher várias razões para não querer um cachorro, e cada entrada na tabela `null_forms` está vinculada a exatamente um usuário.
 
-- **user_forms (id_users):** A tabela user_forms está relacionada à tabela users através do campo id_users, que é uma chave estrangeira. Cada registro em user_forms está associado a um único usuário na tabela users.
-
-<br><br>
+<br>
 
 ## Regras de Negócio
 
@@ -199,10 +212,11 @@
 
 <sup>Fonte:  Material produzido pelo autor (2024) </sup>
 </div>
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;Esse modelo relacional pode ser gerado por meio do código em sql, para acessar [clique aqui](modelagemRelacional.xml)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Esse modelo físico pode ser gerado por meio do código em sql, para acessar [Clique aqui](modelagemRelacional.xml)
+<br>
 
 ## Considerações Finais
 
 &nbsp;&nbsp;&nbsp;&nbsp;Este modelo relacional simplificado fornece uma base para o gerenciamento eficiente das informações dos usuários e suas respostas nos formulários do projeto Abandono Zero. As entidades, seus atributos e relacionamentos garantem a organização e a integridade dos dados. As regras de negócio garantem a consistência e a confiabilidade das informações.
-*

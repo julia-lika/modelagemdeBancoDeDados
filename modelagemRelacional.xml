@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="270" y="742" name="users">
+</datatypes><table x="274" y="764" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -255,13 +255,13 @@
 <row name="vet_visit_count" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="stopped_cohabitation" null="1" autoincrement="0">
+<row name="stopped_living_together" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="reasons_stopped_cohabitation" null="1" autoincrement="0">
+<row name="reasons_stopped_living_together" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="would_cohabitate_new_dog" null="1" autoincrement="0">
+<row name="would_live_new_dog" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="id_dog_forms_have" null="1" autoincrement="0">
@@ -272,7 +272,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1028" y="886" name="want_forms">
+<table x="1053" y="886" name="want_forms">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -387,7 +387,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1244" y="1267" name="dog_forms_want">
+<table x="1249" y="1261" name="dog_forms_want">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -411,6 +411,27 @@
 <default>NULL</default></row>
 <row name="met_before" null="1" autoincrement="0">
 <datatype>BINARY</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="258" y="1073" name="user_forms">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_users" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="name" null="1" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
+<default>NULL</default></row>
+<row name="phone_number" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
