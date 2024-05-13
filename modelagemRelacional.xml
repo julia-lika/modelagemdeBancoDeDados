@@ -69,7 +69,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="443" y="928" name="general_forms">
+<table x="427" y="902" name="general_forms">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -114,7 +114,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="615" y="883" name="have_forms">
+<table x="609" y="881" name="have_forms">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -272,7 +272,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1053" y="886" name="want_forms">
+<table x="1058" y="882" name="want_forms">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -316,9 +316,6 @@
 <row name="researched_expenses" null="1" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
 <default>NULL</default></row>
-<row name="id_dog_forms_have" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
 <row name="id_dog_forms_want" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dog_forms_want" row="id" />
@@ -327,7 +324,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="445" y="1283" name="null_forms">
+<table x="431" y="1283" name="null_forms">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -342,7 +339,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1250" y="894" name="dog_forms_have">
+<table x="1240" y="881" name="dog_forms_have">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -386,7 +383,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1249" y="1261" name="dog_forms_want">
+<table x="1236" y="1251" name="dog_forms_want">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
